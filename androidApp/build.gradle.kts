@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.daggerHilt)
+    id(libs.plugins.kotlinKapt.get().pluginId)
 }
 
 android {
@@ -44,5 +46,9 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
     debugImplementation(libs.compose.ui.tooling)
 }

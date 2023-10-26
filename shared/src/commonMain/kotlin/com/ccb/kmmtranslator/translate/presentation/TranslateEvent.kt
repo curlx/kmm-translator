@@ -15,6 +15,6 @@ sealed class TranslateEvent {
     data class SelectHistoryItem(val item: UiHistoryItem): TranslateEvent()
     object EditTranslation: TranslateEvent()
     object RecordAudio: TranslateEvent()
-    data class SubmitVoiceResult(val result: String): TranslateEvent()
+    data class SubmitVoiceResult(val result: String?): TranslateEvent()
     object OnErrorSeen: TranslateEvent()
 }
