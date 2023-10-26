@@ -1,7 +1,7 @@
 package com.ccb.kmmtranslator.translate.data.history
 
-import com.ccb.kmmtranslator.core.util.CommonFlow
-import com.ccb.kmmtranslator.core.util.toCommonFlow
+import com.ccb.kmmtranslator.core.domain.util.CommonFlow
+import com.ccb.kmmtranslator.core.domain.util.toCommonFlow
 import com.ccb.kmmtranslator.database.TranslateDatabase
 import com.ccb.kmmtranslator.translate.domain.history.HistoryDataSource
 import com.ccb.kmmtranslator.translate.domain.history.HistoryItem

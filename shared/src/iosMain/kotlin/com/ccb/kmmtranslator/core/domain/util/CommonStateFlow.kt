@@ -1,4 +1,4 @@
-package com.ccb.kmmtranslator.core.util
+package com.ccb.kmmtranslator.core.domain.util
 
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.StateFlow
