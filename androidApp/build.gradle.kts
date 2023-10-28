@@ -42,13 +42,23 @@ android {
 
 dependencies {
     implementation(projects.shared)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.navigation)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
-    implementation(libs.compose.material3)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.compose.activity)
+
     implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
     kapt(libs.hilt.android.compiler)
-    implementation(libs.hilt.navigation.compose)
+
+    implementation(libs.ktor.android)
     debugImplementation(libs.compose.ui.tooling)
+}
+
+hilt {
+    enableAggregatingTask = false
 }
