@@ -25,7 +25,7 @@ fun KmmTranslatorTheme(
     } else {
         lightColors
     }
-    val SfProText = FontFamily(
+    val sfProText = FontFamily(
         Font(
             resId = R.font.sf_pro_text_regular,
             weight = FontWeight.Normal,
@@ -41,27 +41,27 @@ fun KmmTranslatorTheme(
     )
     val typography = Typography(
         headlineLarge = TextStyle(
-            fontFamily = SfProText,
+            fontFamily = sfProText,
             fontWeight = FontWeight.Bold,
             fontSize = 30.sp,
         ),
         headlineMedium = TextStyle(
-            fontFamily = SfProText,
+            fontFamily = sfProText,
             fontWeight = FontWeight.Bold,
             fontSize = 24.sp,
         ),
         headlineSmall = TextStyle(
-            fontFamily = SfProText,
+            fontFamily = sfProText,
             fontWeight = FontWeight.Medium,
             fontSize = 18.sp,
         ),
         bodyLarge = TextStyle(
-            fontFamily = SfProText,
+            fontFamily = sfProText,
             fontWeight = FontWeight.Normal,
             fontSize = 14.sp,
         ),
-        bodySmall = TextStyle(
-            fontFamily = SfProText,
+        bodyMedium = TextStyle(
+            fontFamily = sfProText,
             fontWeight = FontWeight.Normal,
             fontSize = 12.sp,
         ),
