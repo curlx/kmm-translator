@@ -95,6 +95,7 @@ private extension TranslateTextField {
         let toLanguage: UiLanguage
         let onTranslateEvent: (TranslateEvent) -> Void
         
+        private let textToSpeech = TextToSpeech()
         
         var body: some View {
             VStack(alignment: .leading) {
@@ -137,7 +138,10 @@ private extension TranslateTextField {
                             .foregroundColor(.lightBlue)
                     }
                     Button(action: {
-                        
+                        textToSpeech.speak(
+                            text: toText,
+                            language: toLanguage.language.langCode
+                        )
                     }) {
                         Image(systemName: "speaker.wave.2")
                             .foregroundColor(.lightBlue)

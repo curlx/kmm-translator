@@ -18,6 +18,7 @@
 		91A0925E2AF515990071AA9E /* LanguageDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0925D2AF515990071AA9E /* LanguageDisplay.swift */; };
 		91A092602AF516B90071AA9E /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0925F2AF516B90071AA9E /* ProgressButton.swift */; };
 		91A092622AF517CF0071AA9E /* TranslateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A092612AF517CF0071AA9E /* TranslateTextField.swift */; };
+		91A092642AF5346A0071AA9E /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A092632AF5346A0071AA9E /* TextToSpeech.swift */; };
 		91C5B87C2AEFF4EE00789C69 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5B87B2AEFF4EE00789C69 /* Colors.swift */; };
 		91CBE2182AF45FA200D99361 /* LanguageDropDownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBE2172AF45FA200D99361 /* LanguageDropDownItem.swift */; };
 		91CBE21A2AF462A900D99361 /* LanguageDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBE2192AF462A900D99361 /* LanguageDropDown.swift */; };
@@ -51,6 +52,7 @@
 		91A0925D2AF515990071AA9E /* LanguageDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDisplay.swift; sourceTree = "<group>"; };
 		91A0925F2AF516B90071AA9E /* ProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButton.swift; sourceTree = "<group>"; };
 		91A092612AF517CF0071AA9E /* TranslateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTextField.swift; sourceTree = "<group>"; };
+		91A092632AF5346A0071AA9E /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		91C5B87B2AEFF4EE00789C69 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		91CBE2172AF45FA200D99361 /* LanguageDropDownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDownItem.swift; sourceTree = "<group>"; };
 		91CBE2192AF462A900D99361 /* LanguageDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDropDown.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				91CBE2162AF45F8500D99361 /* components */,
 				91A092572AF5029E0071AA9E /* IOSTranslateViewModel.swift */,
 				91A092592AF507E10071AA9E /* TranslateScreen.swift */,
+				91A092632AF5346A0071AA9E /* TextToSpeech.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				91A092562AF500CB0071AA9E /* SwapLanguageButton.swift in Sources */,
 				91C5B87C2AEFF4EE00789C69 /* Colors.swift in Sources */,
 				91A0925A2AF507E10071AA9E /* TranslateScreen.swift in Sources */,
+				91A092642AF5346A0071AA9E /* TextToSpeech.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				91A092622AF517CF0071AA9E /* TranslateTextField.swift in Sources */,
 			);
