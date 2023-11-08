@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -50,7 +51,8 @@ fun TranslateTextField(
     onTextChange: (String) -> Unit,
     onCopyClick: (String) -> Unit,
     onCloseClick: () -> Unit,
-    onSpeakerClick: () -> Unit,
+    onFromSpeakerClick: () -> Unit,
+    onToSpeakerClick: () -> Unit,
     onTextFieldClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -87,7 +89,8 @@ fun TranslateTextField(
                     toLanguage = toLanguage,
                     onCopyClick = onCopyClick,
                     onCloseClick = onCloseClick,
-                    onSpeakerClick = onSpeakerClick,
+                    onFromSpeakerClick = onFromSpeakerClick,
+                    onToSpeakerClick = onToSpeakerClick,
                     modifier = Modifier.fillMaxWidth(),
                 )
             }
@@ -103,13 +106,27 @@ private fun TranslatedTextField(
     toLanguage: UiLanguage,
     onCopyClick: (String) -> Unit,
     onCloseClick: () -> Unit,
-    onSpeakerClick: () -> Unit,
+    onFromSpeakerClick: () -> Unit,
+    onToSpeakerClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
         modifier = modifier,
     ) {
-        LanguageDisplay(language = fromLanguage)
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(end = 8.dp)
+        ) {
+            LanguageDisplay(
+                language = fromLanguage,
+                modifier = Modifier.weight(1f),
+            )
+            Icon(
+                imageVector = Icons.Rounded.Close,
+                contentDescription = stringResource(id = R.string.copy),
+                tint = LightBlue,
+                modifier = Modifier.clickable { onCloseClick.invoke() }
+            )
+        }
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = fromText,
@@ -128,10 +145,10 @@ private fun TranslatedTextField(
                     tint = LightBlue,
                 )
             }
-            IconButton(onClick = onCloseClick) {
+            IconButton(onClick = onFromSpeakerClick) {
                 Icon(
-                    imageVector = Icons.Rounded.Close,
-                    contentDescription = stringResource(id = R.string.copy),
+                    imageVector = ImageVector.vectorResource(id = R.drawable.speaker),
+                    contentDescription = stringResource(id = R.string.play_loud),
                     tint = LightBlue,
                 )
             }
@@ -158,7 +175,7 @@ private fun TranslatedTextField(
                     tint = LightBlue,
                 )
             }
-            IconButton(onClick = onSpeakerClick) {
+            IconButton(onClick = onToSpeakerClick) {
                 Icon(
                     imageVector = ImageVector.vectorResource(id = R.drawable.speaker),
                     contentDescription = stringResource(id = R.string.play_loud),
@@ -186,7 +203,7 @@ private fun IdleTranslateTextField(
             onValueChange = onTextChange,
             cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxSize()
                 .onFocusChanged { isFocused = it.isFocused },
             textStyle = TextStyle(
                 color = MaterialTheme.colorScheme.onSurface,

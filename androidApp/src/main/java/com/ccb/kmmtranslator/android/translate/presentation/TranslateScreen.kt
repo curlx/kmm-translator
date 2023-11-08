@@ -73,7 +73,8 @@ fun TranslateScreen(
                 },
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = MaterialTheme.colorScheme.onPrimary,
-                modifier = Modifier.size(64.dp)
+                modifier = Modifier
+                    .size(64.dp)
                     .clip(CircleShape),
             ) {
                 Icon(
@@ -160,14 +161,11 @@ fun TranslateScreen(
                     onCloseClick = {
                         onEvent(TranslateEvent.CloseTranslation)
                     },
-                    onSpeakerClick = {
-                        textToSpeech.language = state.toLanguage.toLocale() ?: Locale.ENGLISH
-                        textToSpeech.speak(
-                            state.toText,
-                            TextToSpeech.QUEUE_FLUSH,
-                            null,
-                            null,
-                        )
+                    onFromSpeakerClick = {
+                        speak(textToSpeech, state.fromLanguage.toLocale() ?: Locale.ENGLISH, state.fromText)
+                    },
+                    onToSpeakerClick = {
+                        speak(textToSpeech, state.toLanguage.toLocale() ?: Locale.ENGLISH, state.toText)
                     },
                     onTextFieldClick = {
                         onEvent(TranslateEvent.EditTranslation)
@@ -194,4 +192,14 @@ fun TranslateScreen(
             }
         }
     }
+}
+
+private fun speak(textToSpeech: TextToSpeech, locale: Locale, text: String?) {
+    textToSpeech.language = locale
+    textToSpeech.speak(
+        text,
+        TextToSpeech.QUEUE_FLUSH,
+        null,
+        null,
+    )
 }
