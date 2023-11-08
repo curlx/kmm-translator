@@ -78,7 +78,7 @@ struct TranslateScreen: View {
             
             VStack {
                 Spacer()
-                NavigationLink(destination: Text("Voice-to-text screen")) {
+                NavigationLink(destination: Text("This is a placeholder screen")) {
                     ZStack {
                         Circle()
                             .foregroundColor(.primaryColor)
