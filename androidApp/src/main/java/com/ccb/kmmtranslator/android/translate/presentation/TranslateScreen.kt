@@ -66,24 +66,25 @@ fun TranslateScreen(
     }
 
     Scaffold(
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = {
-                    onEvent(TranslateEvent.RecordAudio)
-                },
-                containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = MaterialTheme.colorScheme.onPrimary,
-                modifier = Modifier
-                    .size(64.dp)
-                    .clip(CircleShape),
-            ) {
-                Icon(
-                    imageVector = ImageVector.vectorResource(id = R.drawable.mic),
-                    contentDescription = stringResource(id = R.string.record_audio),
-                )
-            }
-        },
-        floatingActionButtonPosition = FabPosition.Center,
+//        WIP
+//        floatingActionButton = {
+//            FloatingActionButton(
+//                onClick = {
+//                    onEvent(TranslateEvent.RecordAudio)
+//                },
+//                containerColor = MaterialTheme.colorScheme.primary,
+//                contentColor = MaterialTheme.colorScheme.onPrimary,
+//                modifier = Modifier
+//                    .size(64.dp)
+//                    .clip(CircleShape),
+//            ) {
+//                Icon(
+//                    imageVector = ImageVector.vectorResource(id = R.drawable.mic),
+//                    contentDescription = stringResource(id = R.string.record_audio),
+//                )
+//            }
+//        },
+//        floatingActionButtonPosition = FabPosition.Center,
     ) { padding ->
         LazyColumn(
             modifier = Modifier
