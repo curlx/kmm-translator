@@ -1,6 +1,8 @@
 # KMM-Translator
 Build a translator app by using KMM.
-**You must fill the `BASE_URL` in the class `NetworkConstants` with your own translation API. Please check the `TranslateDto` class for the query parameter names and `TranslatedDto` for the response property name.**
+**You must fill the `BASE_URL` in the class `NetworkConstants` with your own translation API (this project uses [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate)).**
+
+Please check the `TranslateDto` class for the query parameter names and `TranslatedDto` for the response property name if you use another translation API.
 
 To learn another KMM example, please check the [video](https://www.youtube.com/watch?v=XWSzbMnpAgI)
 
