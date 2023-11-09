@@ -6,6 +6,8 @@
 
     <application
         android:name=".TranslateApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:allowBackup="false"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

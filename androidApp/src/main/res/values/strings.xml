@@ -14,4 +14,5 @@
     <string name="error_service">An error happended. Please try again later.</string>
     <string name="error_unknown">Oops, an unknown error happened.</string>
     <string name="record_audio">Record audio</string>
+    <string name="app_name">Translatory</string>
 </resources>

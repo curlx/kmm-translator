@@ -39,7 +39,9 @@ fun LanguageDropDown(
             expanded = isOpen,
             onDismissRequest = onDismiss
         ) {
-            UiLanguage.allLanguages.forEach { language ->
+            UiLanguage.allLanguages
+                .filter { it.language.langCode == "en" || it.language.langCode == "de" }
+                .forEach { language ->
                 LanguageDropDownItem(
                     language = language,
                     onClick = {
